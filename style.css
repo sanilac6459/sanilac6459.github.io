@@ -13,7 +13,7 @@ p {
 }
 
 a {
-    color: #b586a1;
+    color: #d199b6;
 }
 
 #logo, .project-img {
@@ -54,7 +54,7 @@ a {
 }
 
 .bg-3 {
-    background-color: #c493b0;
+    background-color: #d199b6;
     color: #ffffff;
 }
 
@@ -83,5 +83,5 @@ a {
 }
 
 .navbar-nav li a:hover {
-    color: #e1bbc9 !important;
+    color: #d199b6 !important;
 }
