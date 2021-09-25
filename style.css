@@ -72,6 +72,10 @@ a {
     background-color: #000000 !important;
 }
 
+.navbar-expand-lg .nabar-collapse{
+    text-align: right;
+}
+
 .navbar {
     padding-top: 15px;
     padding-bottom: 15px;
