@@ -73,7 +73,7 @@ a {
 }
 
 .navbar-collapse{
-    text-align: right;
+    text-align: right; !important;
 }
 
 .navbar {
