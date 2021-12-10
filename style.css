@@ -40,7 +40,6 @@ a {
 }
 
 .bg-2 {
-    /*background-color: #d59aa1;*/
     background-color: #C397A0;
     color: #ffffff;
 }
@@ -86,6 +85,5 @@ a {
 }
 
 .navbar-nav li a:hover {
-    /*color: #cf8c93 !important;*/
     color: #AD717D !important;
 }
