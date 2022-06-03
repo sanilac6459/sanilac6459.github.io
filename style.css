@@ -13,7 +13,7 @@ p {
 }
 
 a {
-    color: #d08b8e;
+    color: #c28e88;
 }
 
 #logo, .project-img {
@@ -40,7 +40,7 @@ a {
 }
 
 .bg-2 {
-    background-color: #ddacae;
+    background-color: #cea5a0;
     color: #ffffff;
 }
 
@@ -55,7 +55,8 @@ a {
 }
 
 .bg-3 {
-    background-color: #d9a1a3;
+    /*background-color: #c89994;*/
+    background-color: #c89994;
     color: #ffffff;
 }
 
@@ -86,5 +87,5 @@ a {
 }
 
 .navbar-nav li a:hover {
-    color: #d08b8e !important;
+    color:  #c28e88 !important;
 }
