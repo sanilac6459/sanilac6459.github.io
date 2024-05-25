@@ -46,12 +46,16 @@ a {
 
 .bg-1 {
     background-color: #ffffff; /* White */
-    color: #555555;
 }
 
 .bg-2 {
     background-color: #cea5a0;
     color: #ffffff;
+    text-align: right !important;
+}
+
+h3 {
+    text-align: center;
 }
 
 .card {
@@ -72,7 +76,7 @@ a {
 }
 
 .bg-4 {
-    background-color: #000000;
+    /* background-color: #000000; */
     color: #ffffff;
 }
 
@@ -82,8 +86,9 @@ a {
 }
 
 .bg-dark{
-    background-color: #000000 !important;
-    /*background-color: #BC8A94 !important;*/
+    /* background-color: #fffafa !important; */
+    /* background-color: #BC8A94 !important; */
+    color: #000000
 }
 
 .navbar {
@@ -97,6 +102,9 @@ a {
     text-align: right !important;
 }
 
+.nav-item {
+    color:aqua !important;
+}
 .navbar-nav li a:hover {
     color:  #c28e88 !important;
 }
