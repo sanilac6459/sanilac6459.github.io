@@ -2829,14 +2829,16 @@ input, select, textarea {
 
 		.main.style3 {
 				background: #C8AEAB;
+				
 			}
 
 		.main.style2 {
 			background-color: #BFA09C;
+			/* background-color: #333; */
 			/* color: rgba(255, 255, 255, 0.75); */
 			color: #fff;
 			background-attachment: fixed,							fixed;
-			/* background-image: url("images/overlay1.png"), url("../../images/header.jpg"); */
+			/* background-image: url("images/overlay1.png"), url("../../images/typing.gif"); */
 			background-size: auto,							cover;
 		}
 
