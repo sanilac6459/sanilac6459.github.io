@@ -17,9 +17,22 @@
 		<!-- Header -->
 			<section id="header">
 				<div class="inner">
-					<!-- <span class="icon solid major fa-flower"></span> -->
 					 <img src = "images/logo.png">
-					<h1>Hi, I'm <strong>Sanila</strong> 🥀</h1>
+				 
+					<!-- Typing animation -->
+					<div class = "container-special">
+						<h1>Hi, I'm <strong><span style = "color: #fff" class = "auto-type"></span></strong> 🥀</h1>
+					</div>
+					<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+					<script>
+						var typed = new Typed(".auto-type", {
+							strings: ["Sanila", "an aspiring software engineer", "a web developer"],
+							typeSpeed: 60,
+							backSpeed: 60,
+							loop: true
+						})
+					</script>
+					
 					<p style="color: #fff">Welcome to my Portfolio Website!</p>
 					<ul class="actions special">
 						<li><a href="#aboutme" class="button scrolly">Learn more about me and my work :)</a></li>
