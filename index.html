@@ -21,13 +21,14 @@
 				position: fixed;
 				top: 0;
 				width: 100%;
-				background-color: #D3B8B4;
-				/* background-color: #DDBFBB; */
+				/* background-color: #D3B8B4; */
+				background-color: #D0B8B4;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 				padding: 25px 20px;
 				z-index: 1000;
+				box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 			}
 			
 			.navbar .logo {
@@ -42,20 +43,24 @@
 				list-style-type: none;
 				margin: 0;
 				padding: 0;
+				
 			}
 	
 			.navbar ul li {
 				padding: 0 15px;
+				
 			}
 	
 			.navbar ul li a {
 				color: #000;
 				text-decoration: none;
 				font-size: 18px;
+				border-bottom: none; /* Removes any border under the text */
 			}
 	
 			.navbar ul li a:hover {
 				color: #fff;
+				
 			}
 	
 			/* Responsive Menu */
@@ -66,7 +71,13 @@
 					background-color: #D3B8B4;
 					position: absolute;
 					top: 50px;
+					left: 0; /* Align the menu to the left */
 					width: 100%;
+					padding-left: 20px; /* Add padding to the left side */
+					padding: 15px 0; /* Add padding above and below the items */
+        			margin: 10px 0;  /* Add margin between the items for additional space */
+					line-height: 1.6; /* Increase this value to add space between lines */
+					
 				}
 	
 				.navbar ul.active {
@@ -95,7 +106,7 @@
 		<!-- Header -->
 			<!-- Navigation Bar -->
 			<nav class="navbar">
-				<a href="#header" class="logo">Sanila Chowdhury</a>
+				<a href="#header" class="logo" style = "border-bottom: none;">Sanila Chowdhury</a>
 				<ul>
 					<li><a href="#aboutme"><strong>About Me</strong></a></li>
 					<li><a href="#goal"><strong>Career Goals</strong></a></li>
@@ -110,6 +121,8 @@
 					menu.classList.toggle('active');
 				}
 			</script>
+
+			
 		
 		
 		
