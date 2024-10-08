@@ -15,10 +15,105 @@
 		<link rel="" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 		
+		<style>
+			/* Navigation Bar Styles */
+			.navbar {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				background-color: #D3B8B4;
+				/* background-color: #DDBFBB; */
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 25px 20px;
+				z-index: 1000;
+			}
+			
+			.navbar .logo {
+				color: #000;
+				font-size: 20px;
+				font-weight: bold;
+				text-decoration: none;
+			}
+	
+			.navbar ul {
+				display: flex;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+	
+			.navbar ul li {
+				padding: 0 15px;
+			}
+	
+			.navbar ul li a {
+				color: #000;
+				text-decoration: none;
+				font-size: 18px;
+			}
+	
+			.navbar ul li a:hover {
+				color: #fff;
+			}
+	
+			/* Responsive Menu */
+			@media (max-width: 768px) {
+				.navbar ul {
+					flex-direction: column;
+					display: none;
+					background-color: #D3B8B4;
+					position: absolute;
+					top: 50px;
+					width: 100%;
+				}
+	
+				.navbar ul.active {
+					display: flex;
+				}
+	
+				.navbar .menu-toggle {
+					display: block;
+					color: #000;
+					cursor: pointer;
+					font-size: 24px;
+				}
+			}
+	
+			.menu-toggle {
+				display: none;
+			}
+	
+			.is-preload {
+				padding-top: 60px;
+			}
+		</style>
+	
 	</head>
 	<body class="is-preload">
 		<!-- Header -->
-			<section id="header">	
+			<!-- Navigation Bar -->
+			<nav class="navbar">
+				<a href="#header" class="logo">Sanila Chowdhury</a>
+				<ul>
+					<li><a href="#aboutme"><strong>About Me</strong></a></li>
+					<li><a href="#goal"><strong>Career Goals</strong></a></li>
+					<li><a href="#projects"><strong>Projects</strong></a></li>
+					<li><a href="#footer"><strong>Contact</strong></a></li>
+				</ul>
+				<span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+			</nav>
+			<script>
+				function toggleMenu() {
+					var menu = document.querySelector('.navbar ul');
+					menu.classList.toggle('active');
+				}
+			</script>
+		
+		
+		
+		<section id="header">	
 				<div class="inner">
 					
 					 <img src = "images/logo.png"> 
@@ -29,7 +124,7 @@
 					<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 					<script>
 						var typed = new Typed(".auto-type", {
-							strings: ["Sanila", "a CS college student", "a web developer", "an aspiring software engineer", "an aspiring full-stack developer"],
+							strings: ["Sanila", "a web developer", "an aspiring software engineer"],
 							typeSpeed: 55,
 							backSpeed: 55,
 							loop: true
