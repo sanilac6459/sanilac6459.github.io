@@ -2820,21 +2820,25 @@ input, select, textarea {
 	}
 
 		.main.style1 {
-			background: #CEB6B4;
+			/* background: #CEB6B4; */
 			/* background: #CCB3B1; */
 			/* background: #D3BCBA; */
 			/* background: #BFA6A5; */
 			/* color:#fff */
+			background: #D5BCB9;
 			
 		}
 
 		.main.style3 {
-				background: #C8AEAB;
+				/* background: #C8AEAB; */
+				background: #C9AAA6;
 				
 			}
 
 		.main.style2 {
-			background-color: #BFA09C;
+			/* background-color: #D9C2C0; */
+			background-color: #B69490;
+			/* background-color: #BFA09C; */
 			/* background-color: #333; */
 			/* color: rgba(255, 255, 255, 0.75); */
 			color: #fff;
@@ -2936,16 +2940,17 @@ input, select, textarea {
 
 
 img {
-	width: 18%;
+	width: 20%;
 	height: auto;
-	padding-top: 40px;
+	padding-top: 70px;
   }
 	#header {
 		padding: 9em 0 9em 0 ;
 		background-color: #BFA09C;
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed,							fixed,							fixed;
-		background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #D3BCBA 5%, #BEA8A7 30%, #C09891);
+		/* background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #D3BCBA 5%, #BEA8A7 30%, #C09891); */
+		background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #C7ACA9 5%, #C9AAA6 30%, #B69490);
 		background-position: top left,						center center,					center center;
 		background-size: auto,							cover,							cover;
 		overflow: hidden;
@@ -3138,10 +3143,11 @@ img {
 
 	#footer {
 		padding: 6em 0 6em 0 ;
-		background-color: #4686a0;
+		/* background-color: #4686a0; */
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed,							fixed,							fixed;
-		background-image: url("images/overlay2.png"), url("images/overlay4.svg"), linear-gradient(45deg, #F4DBD8 5%, #BEA8A7 30%, #C09891);
+		/* background-image: url("images/overlay2.png"), url("images/overlay4.svg"), linear-gradient(45deg, #F4DBD8 5%, #BEA8A7 30%, #C09891); */
+		background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #C7ACA9 5%, #C9AAA6 30%, #B69490);
 		background-position: top left,						center center,					center center;
 		background-size: auto,							cover,							cover;
 		text-align: center;
