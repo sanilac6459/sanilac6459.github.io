@@ -2815,6 +2815,71 @@ input, select, textarea {
 
 /* Main */
 
+
+
+.content-box{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 2rem;
+
+	margin: 0 10px 20px 20px;
+	background-color: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(20px);
+	border-radius: 1rem;
+	font-size: 14px;
+	transition: 0.4s ease;
+	cursor: pointer;
+}
+
+.content-box h4 {
+	font-size: 1.4rem;
+	font-weight: 700;
+	text-align: center;
+	height: 50%;
+}
+
+
+
+
+.date {
+	font-size: 1rem;
+	text-align: left;
+	
+}
+
+.content-box:before {
+	position: absolute;
+	content: '';
+	width: 12px;
+	height: 12px;
+	
+	
+}
+
+.content-box:hover {
+	box-shadow: 0 0 25px #B69490;
+	/* border: 1px solid #B69490; */
+}
+
+
+.content-box p {
+	text-align: left;
+	font-weight: 400;
+	line-height: 1.2;
+    margin: 5px 0;
+	font-size: 1.1rem;
+} 
+
+
+
+
+
+
+ 
+
+
 	.main {
 		padding: 6em 0 4em 0 ;
 	}
@@ -2825,8 +2890,8 @@ input, select, textarea {
 			/* background: #D3BCBA; */
 			/* background: #BFA6A5; */
 			/* color:#fff */
-			background: #D5BCB9;
-			
+			/* background: #D0B7B3; */
+			background: #D0B7B3;
 		}
 
 		.main.style3 {
@@ -2837,7 +2902,7 @@ input, select, textarea {
 
 		.main.style2 {
 			/* background-color: #D9C2C0; */
-			background-color: #B69490;
+			background-color: #C09F9B;
 			/* background-color: #BFA09C; */
 			/* background-color: #333; */
 			/* color: rgba(255, 255, 255, 0.75); */
@@ -2845,6 +2910,10 @@ input, select, textarea {
 			background-attachment: fixed,							fixed;
 			/* background-image: url("images/overlay1.png"), url("../../images/typing.gif"); */
 			background-size: auto,							cover;
+		}
+
+		.main.style4 {
+			background-color: #D0B7B3;
 		}
 
 			/* .main.style2 a {
@@ -2940,10 +3009,15 @@ input, select, textarea {
 
 
 img {
-	width: 20%;
+	width: 18%;
 	height: auto;
 	padding-top: 70px;
+	
   }
+
+
+
+
 	#header {
 		padding: 9em 0 9em 0 ;
 		background-color: #BFA09C;
