@@ -2906,7 +2906,7 @@ input, select, textarea {
 		}
 
 		.main.style4 {
-			background-color: #D0B7B3;
+			background-color: #E378D0;
 		}
 
 			/* .main.style2 a {
@@ -3176,7 +3176,7 @@ img {
 			-webkit-transition: opacity 1s ease;
 			-ms-transition: opacity 1s ease;
 			transition: opacity 1s ease;
-			background-image: linear-gradient(45deg, #BEA8A7 30%, #C09891);
+			background-image: linear-gradient(45deg, #E378D0 30%, #AD8AE5);
 			content: '';
 			height: 100%;
 			left: 0;
