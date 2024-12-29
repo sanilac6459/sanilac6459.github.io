@@ -3016,7 +3016,7 @@ img {
 		background-color: #BFA09C;
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed,							fixed,							fixed;
-		background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #E378D0 5%, #AD8AE5 30%, #7DD5F2);
+		background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(80deg, #E279CD 5%, #A179E2 30%, #6ACFF0);
 		/* background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #C7ACA9 5%, #C9AAA6 30%, #B69490); */
 		background-position: top left,						center center,					center center;
 		background-size: auto,							cover,							cover;
@@ -3213,7 +3213,7 @@ img {
 		/* background-color: #4686a0; */
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed,							fixed,							fixed;
-		background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #E378D0 5%, #AD8AE5 30%, #7DD5F2);
+		background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(80deg, #E279CD 5%, #A179E2 30%, #6ACFF0);
 		/* background-image: url(images/overlay2.png), url(images/overlay3.svg), linear-gradient(45deg, #C7ACA9 5%, #C9AAA6 30%, #B69490); */
 		background-position: top left,						center center,					center center;
 		background-size: auto,							cover,							cover;
