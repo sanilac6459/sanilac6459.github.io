@@ -27,13 +27,13 @@
 				/* background-color: #BFA09C; */
 				/* background-color: #D8C3C0; */
 				/* background-color: #D4BDBA; */
-				background: #E1D1CC;
+				background: #D8C5C0;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 				padding: 25px 20px;
 				z-index: 1000;
-				box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+				box-shadow: 0 3px 5px rgba(68, 71, 95, 0.2);
 			}
 			
 			.navbar .logo {
@@ -75,7 +75,7 @@
 				.navbar ul {
 					flex-direction: column;
 					display: none;
-					background-color: #E1D1CC;
+					background-color: #D8C5C0;
 					position: absolute;
 					top: 50px;
 					left: 0; 
@@ -84,6 +84,7 @@
 					padding: 15px 0; 
         			margin: 10px 0; 
 					line-height: 2.5; 
+					box-shadow: 0 3px 5px rgba(68, 71, 95, 0.2);
 					
 				}
 
@@ -140,6 +141,16 @@
 					var menu = document.querySelector('.navbar ul');
 					menu.classList.toggle('active');
 				}
+
+				// Close the dropdown menu after clicking a link
+		document.querySelectorAll('.navbar ul li a').forEach(link => {
+			link.addEventListener('click', () => {
+				var menu = document.querySelector('.navbar ul');
+				menu.classList.remove('active');
+			});
+		});
+
+				
 			</script>
 
 			

@@ -2829,9 +2829,9 @@ input, select, textarea {
 
 	margin: 0 10px 20px 20px;
 	/* background-color: #D0C1BF; */
-	/* background-color: #D8C6C0;
-	box-shadow: 0 4px 6px rgba(68, 71, 95, 0.2); */
-	background-color: rgba(255, 255, 255, 0.1);
+	background-color: #DAC3BE;
+	box-shadow: 0 4px 6px rgba(68, 71, 95, 0.2);
+	/* background-color: rgba(255, 255, 255, 0.1); */
 
 	border-radius: 1rem;
 	font-size: 14px;
@@ -2885,7 +2885,8 @@ input, select, textarea {
 			/* color:#fff */
 			/* background: #D0B7B3; */
 			/* background: #D0B7B3; */
-			background: #D8C5C0;
+			/* background: #D8C5C0; */
+			background:#DAC3BE;
 		}
 
 		.main.style3 {
