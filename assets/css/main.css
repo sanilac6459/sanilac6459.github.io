@@ -156,8 +156,8 @@ input, select, textarea {
 	}
 
 	h3 {
-		font-size: 1.35em;
-		line-height: 1.5em;
+		font-size: 1.3em;
+		line-height: 1.3em;
 	}
 
 	h4 {
@@ -2417,7 +2417,8 @@ input, select, textarea {
 	}
 
 		ul li {
-			padding-left: 0.5em;
+			padding-left: 5px;
+			padding-right: 5px;
 		}
 
 		ul.alt {
@@ -2830,7 +2831,7 @@ input, select, textarea {
 	margin: 0 10px 20px 20px;
 	/* background-color: #D0C1BF; */
 	background-color: #DAC3BE;
-	box-shadow: 0 4px 6px rgba(68, 71, 95, 0.2);
+	box-shadow: 5px 4px 6px rgba(68, 71, 95, 0.2);
 	/* background-color: rgba(255, 255, 255, 0.1); */
 
 	border-radius: 1rem;
@@ -2838,6 +2839,7 @@ input, select, textarea {
 	transition: 0.4s ease;
 	cursor: pointer;
 }
+
 
 .content-box h4 {
 	font-size: 1.4rem;
@@ -2856,6 +2858,10 @@ input, select, textarea {
 	
 }
 
+/* #major {
+	padding: 4rem 0;
+	text-align: center;
+} */
 
 .content-box p {
 	text-align: left;
@@ -2866,7 +2872,6 @@ input, select, textarea {
 } 
 
 
-	
 
 
 
@@ -2886,20 +2891,32 @@ input, select, textarea {
 			/* background: #D0B7B3; */
 			/* background: #D0B7B3; */
 			/* background: #D8C5C0; */
-			background:#DAC3BE;
+			background:#D4BCB7;
+		}
+
+		.main.style4 {
+			/* background: #CEB6B4; */
+			/* background: #CCB3B1; */
+			/* background: #D3BCBA; */
+			/* background: #BFA6A5; */
+			/* color:#fff */
+			/* background: #D0B7B3; */
+			/* background: #D0B7B3; */
+			/* background: #D8C5C0; */
+			background:#C3ADAC;
 		}
 
 		.main.style3 {
 				/* background: #C8AEAB; */
 				/* background: #C9AAA6; */
-				background: #B5A3A6;
+				background: #B7A4A6;
 				
-			}
+		}
 
 		.main.style2 {
 			/* background-color: #D9C2C0; */
 			/* background-color: #C09F9B; */
-			background: #9F939D;
+			background: #A6959C;
 			/* background-color: #BFA09C; */
 			/* background-color: #333; */
 			/* color: rgba(255, 255, 255, 0.75); */
@@ -2909,9 +2926,7 @@ input, select, textarea {
 			background-size: auto,							cover;
 		}
 
-		.main.style4 {
-			background-color: #E378D0;
-		}
+		
 
 			/* .main.style2 a {
 				border-bottom-color: rgba(255, 255, 255, 0.5);
