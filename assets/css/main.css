@@ -3712,3 +3712,29 @@ img {
     object-fit: contain;
 }
 
+/* --- Media Query for Small Screens --- */
+
+@media (max-width: 768px) { /* Styles below apply when screen width is 768px or less */
+
+    /* Adjust padding for the content box on small screens */
+    .content-box h4 {
+     
+		margin-top: 25px;
+        /* You can adjust other paddings too */
+    }
+
+    /* Make the image bigger on small screens */
+    .content-box .experience-icon {
+        width: 15% !important; /* Example: make it 40px wide on small screens */
+		position: relative;
+		top: 10px;
+        /* Or use percentage if you prefer: width: 15%; */
+    }
+
+    /* You can also adjust the h4's font-size if needed for small screens */
+    .content-box .experience-title {
+        font-size: 1.2em; /* Example: slightly smaller font size */
+        /* You can also add margin-top here if you want space above the title *just* for the h4, but padding-top on .content-box is usually better for overall box spacing */
+    }
+}
+
