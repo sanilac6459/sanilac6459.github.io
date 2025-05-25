@@ -3739,4 +3739,71 @@ img {
 }
 
 
+.image-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the image within the container */
+    align-items: flex-start; /* Vertically align image to the top of its container */
 
+    /* --- IMPORTANT: Define the fixed size of your cropping frame --- */
+    width: 250px; /* Adjust this to your desired width of the cropped area */
+    height: 300px; /* Adjust this to your desired height of the cropped area (portrait typical) */
+    overflow: hidden; /* CRUCIAL: This hides parts of the image that go beyond the container's bounds */
+    border-radius: 50%; /* Apply rounded corners to the cropped frame */
+
+    /* Positioning the image-container within its column */
+    margin-top: 0;      /* Remove top margin if inherited */
+    margin-bottom: 30px; /* Keep your bottom margin */
+    margin-left: auto;   /* Pushes the container to the right within its column */
+    margin-right: auto;  /* Centers the container horizontally if it has space */
+}
+
+/* Ensure the column is a flex container to make height: 100% work for its children */
+.col-6 {
+    display: flex;
+    flex-direction: column; /* Allows content within the column to stack vertically */
+    /* If your framework has padding on .col-6, you might adjust it here or on the image-container */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the image */
+    align-items: flex-start; /* Vertically align image to the top */
+
+    /* Define the exact size of your circular frame */
+    width: 350px;  /* Example: set a fixed width */
+    height: 350px; /* IMPORTANT: Height must equal width for a perfect circle */
+    overflow: hidden; /* CRUCIAL: Hides anything outside the circle */
+    border-radius: 50%; /* Creates the circular shape */
+
+    /* Positioning the container within its column */
+    margin-top: 50px;       /* Align to the top of its column */
+   
+    margin-left: auto;   /* Center horizontally within the col-6 */
+    margin-right: auto;
+}
+
+.image-container img {
+    /* To 'zoom in', set dimensions larger than the container's */
+    /* Experiment with these values to control the zoom level */
+    width: 110%;  /* Make image 20% wider than container */
+    height: 100%; /* Make image 20% taller than container */
+    display: block; /* Remove extra space below the image */
+
+    object-fit: cover; /* This is essential for the "zoom and crop" effect */
+
+    /* This controls WHICH PART of the zoomed-in image is visible */
+    /* Adjust these values to focus on the desired area (e.g., your face) */
+    /* object-position: center 30%;  */
+    object-position: 90% 20%; 
+
+    /* Ensure no conflicting styles like max-width: 100% or height: auto here */
+    max-width: none; /* Remove any potential max-width limits */
+    max-height: none; /* Remove any potential max-height limits */
+    padding: 0; /* No padding on the image itself */
+    margin: 0;  /* No margin on the image itself */
+}
+
+/* Ensure the first paragraph of text is also aligned to the top */
+.col-6 p:first-child {
+    margin-top: 0;
+}
