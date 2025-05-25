@@ -150,61 +150,62 @@
 			<script>
 
 			document.addEventListener('DOMContentLoaded', function() {
-        const sections = document.querySelectorAll('section'); // Selects all <section> tags
-        const navLinks = document.querySelectorAll('.navbar ul li a'); // Selects all links in your navbar
+			const sections = document.querySelectorAll('section'); // Selects all <section> tags
+			const navLinks = document.querySelectorAll('.navbar ul li a'); // Selects all links in your navbar
 
-        function highlightNavLink() {
-            let currentSectionId = '';
-            const offset = 100; // Height of your fixed navbar + a little buffer. Adjust if your navbar is taller.
+			function highlightNavLink() {
+				let currentSectionId = '';
+				const offset = 100; // Height of your fixed navbar + a little buffer. Adjust if your navbar is taller.
 
-            // Iterate through sections from the LAST to the FIRST
-            // This is crucial for correctly identifying the active section, especially the last one
-            for (let i = sections.length - 1; i >= 0; i--) {
-                const section = sections[i];
-                const sectionTop = section.offsetTop;
+				// Iterate through sections from the LAST to the FIRST
+				// This is crucial for correctly identifying the active section, especially the last one
+				for (let i = sections.length - 1; i >= 0; i--) {
+					const section = sections[i];
+					const sectionTop = section.offsetTop;
 
-                // Check if the current scroll position is within this section
-                // or if we are at the very bottom of the page and this is the last section
-                if (pageYOffset >= sectionTop - offset || (i === sections.length - 1 && (window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 5)) {
-                    currentSectionId = section.getAttribute('id');
-                    break; // Found the active section, no need to check further
-                }
-            }
-
-
-            // Apply/Remove 'active-nav' class
-            navLinks.forEach(link => {
-                link.classList.remove('active-nav'); // Remove from all first
-                // Check if the link's href matches the current section's ID
-                if (link.href.endsWith('#' + currentSectionId)) {
-                    link.classList.add('active-nav'); // Add to the matching link
-                }
-            });
-        }
-
-        // Run on page load (in case user loads page directly to a section ID)
-        highlightNavLink();
-
-        // Run on scroll
-        window.addEventListener('scroll', highlightNavLink);
-
-        // --- Your toggleMenu function for responsive menu (if you have one) ---
-        // function toggleMenu() {
-        //     const navbarUl = document.querySelector('.navbar ul');
-        //     navbarUl.classList.toggle('active');
-        // }
-    });
-				function toggleMenu() {
-					var menu = document.querySelector('.navbar ul');
-					menu.classList.toggle('active');
+					// Check if the current scroll position is within this section
+					// or if we are at the very bottom of the page and this is the last section
+					if (pageYOffset >= sectionTop - offset || (i === sections.length - 1 && (window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 5)) {
+						currentSectionId = section.getAttribute('id');
+						break; // Found the active section, no need to check further
+					}
 				}
 
-				// Close the dropdown menu after clicking a link
-		document.querySelectorAll('.navbar ul li a').forEach(link => {
-			link.addEventListener('click', () => {
-				var menu = document.querySelector('.navbar ul');
-				menu.classList.remove('active');
+
+				// Apply/Remove 'active-nav' class
+				navLinks.forEach(link => {
+					link.classList.remove('active-nav'); // Remove from all first
+					// Check if the link's href matches the current section's ID
+					if (link.href.endsWith('#' + currentSectionId)) {
+						link.classList.add('active-nav'); // Add to the matching link
+					}
+				});
+			}
+
+				// Run on page load (in case user loads page directly to a section ID)
+				highlightNavLink();
+
+				// Run on scroll
+				window.addEventListener('scroll', highlightNavLink);
+
+				// --- Your toggleMenu function for responsive menu (if you have one) ---
+				// function toggleMenu() {
+				//     const navbarUl = document.querySelector('.navbar ul');
+				//     navbarUl.classList.toggle('active');
+				// }
 			});
+				
+			function toggleMenu() {
+				var menu = document.querySelector('.navbar ul');
+				menu.classList.toggle('active');
+			}
+
+				// Close the dropdown menu after clicking a link
+			document.querySelectorAll('.navbar ul li a').forEach(link => {
+				link.addEventListener('click', () => {
+					var menu = document.querySelector('.navbar ul');
+					menu.classList.remove('active');
+				});
 		});
 
 				
@@ -304,14 +305,8 @@
 					<p style="color: #44475F; line-height: 1.5; position: relative; top: -40px; text-align: left; margin-left: 75px; position: relative; bottom: 25px;">• Handled IT Inventory Management by collecting 100+ PC and monitor tags, ensuring accurate asset tracking and organization</p>	
 				</div>
 				</div>
-				 
-
-				
 			  </section>
 			
-			
-
-	
 
 		<!-- Two -->
 			<section id="skills" class="main style3 special">
@@ -497,7 +492,6 @@
 				<h2>Contact</h2>
 				<ul class="icons">
 					<li><a href="mailto: sanilachowdhury@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-					<!-- <li><a href="https://www.instagram.com/sxnilaa/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->
 					<li><a href="https://github.com/sanilac6459" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 					<li><a href="https://www.linkedin.com/in/sanila-chowdhury/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
 				</ul>
