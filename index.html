@@ -66,9 +66,17 @@
 	
 			.navbar ul li a:hover {
 				color: #22223B;
-				text-decoration: underline;
 				text-underline-offset: 10px;
 				
+			}
+
+			/* --- NEW CSS FOR ACTIVE NAV LINK --- */
+			.navbar ul li a.active-nav {
+				color: #22223B; /* Darker color for active state */
+				font-weight: bold; /* Make it bold when active */
+				text-decoration: none; /* Remove any default underline */
+				border-bottom: 2px solid #22223B; /* Solid underline for active state */
+				text-underline-offset: 10px; /* Adjust offset for active state */
 			}
 	
 			/* Responsive Menu */
@@ -140,6 +148,52 @@
 				<span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
 			</nav>
 			<script>
+
+			document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section'); // Selects all <section> tags
+        const navLinks = document.querySelectorAll('.navbar ul li a'); // Selects all links in your navbar
+
+        function highlightNavLink() {
+            let currentSectionId = '';
+            const offset = 100; // Height of your fixed navbar + a little buffer. Adjust if your navbar is taller.
+
+            // Iterate through sections from the LAST to the FIRST
+            // This is crucial for correctly identifying the active section, especially the last one
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const section = sections[i];
+                const sectionTop = section.offsetTop;
+
+                // Check if the current scroll position is within this section
+                // or if we are at the very bottom of the page and this is the last section
+                if (pageYOffset >= sectionTop - offset || (i === sections.length - 1 && (window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 5)) {
+                    currentSectionId = section.getAttribute('id');
+                    break; // Found the active section, no need to check further
+                }
+            }
+
+
+            // Apply/Remove 'active-nav' class
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav'); // Remove from all first
+                // Check if the link's href matches the current section's ID
+                if (link.href.endsWith('#' + currentSectionId)) {
+                    link.classList.add('active-nav'); // Add to the matching link
+                }
+            });
+        }
+
+        // Run on page load (in case user loads page directly to a section ID)
+        highlightNavLink();
+
+        // Run on scroll
+        window.addEventListener('scroll', highlightNavLink);
+
+        // --- Your toggleMenu function for responsive menu (if you have one) ---
+        // function toggleMenu() {
+        //     const navbarUl = document.querySelector('.navbar ul');
+        //     navbarUl.classList.toggle('active');
+        // }
+    });
 				function toggleMenu() {
 					var menu = document.querySelector('.navbar ul');
 					menu.classList.toggle('active');
@@ -447,7 +501,9 @@
 					<li><a href="https://github.com/sanilac6459" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 					<li><a href="https://www.linkedin.com/in/sanila-chowdhury/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
 				</ul>
+				
 				<br>
+				<p>© Copyright 2024 Sanila Chowdhury</p>
 			</section>
 
 		<!-- Scripts -->
