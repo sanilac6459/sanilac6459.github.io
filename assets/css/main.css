@@ -2045,6 +2045,7 @@ input, select, textarea {
 			height: 1px;
 			margin-top: 1.5em;
 			width: 6em;
+			text-align: left;
 		}
 
 		header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
