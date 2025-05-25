@@ -3764,46 +3764,53 @@ img {
     /* If your framework has padding on .col-6, you might adjust it here or on the image-container */
 }
 
+/* --- Image Container Styling (Crucial for the Circle and Crop) --- */
 .image-container {
     display: flex;
-    justify-content: center; /* Horizontally center the image */
-    align-items: flex-start; /* Vertically align image to the top */
+    justify-content: center; /* Horizontally center the image within the container */
+    align-items: flex-start; /* Vertically align the image to the top of its container */
 
-    /* Define the exact size of your circular frame */
-    width: 350px;  /* Example: set a fixed width */
-    height: 350px; /* IMPORTANT: Height must equal width for a perfect circle */
-    overflow: hidden; /* CRUCIAL: Hides anything outside the circle */
-    border-radius: 50%; /* Creates the circular shape */
+    /* --- CRITICAL FOR A PERFECT CIRCLE --- */
+    width: 350px;  /* Make sure this width matches the height */
+    height: 350px; /* Make sure this height matches the width */
+    border-radius: 10%; /* This is what makes it a perfect circle */
+    overflow: hidden; /* CRUCIAL: This hides parts of the image that go outside the circle */
 
-    /* Positioning the container within its column */
-    margin-top: 50px;       /* Align to the top of its column */
-   
-    margin-left: auto;   /* Center horizontally within the col-6 */
+    /* --- Positioning the container within its column --- */
+    margin-top: 50px;       /* Moves the entire circle down by 50px from the top of its column */
+    margin-bottom: 50px;       /* No margin at the bottom (adjust as needed for spacing) */
+    margin-left: auto;      /* Centers the circle horizontally within its col-6 */
     margin-right: auto;
 }
 
+/* --- Image Styling (for "zooming in" and focusing) --- */
 .image-container img {
     /* To 'zoom in', set dimensions larger than the container's */
-    /* Experiment with these values to control the zoom level */
-    width: 110%;  /* Make image 20% wider than container */
-    height: 100%; /* Make image 20% taller than container */
-    display: block; /* Remove extra space below the image */
+    /* Experiment with these percentages to control the zoom level */
+    width: 105%;  /* Make image 10% wider than container */
+    height: 105%; /* Make image 10% taller than container (keep equal to width for proportional zoom) */
+    display: block; /* Removes any extra space below the image */
 
-    object-fit: cover; /* This is essential for the "zoom and crop" effect */
+    /* --- CRITICAL FOR "ZOOMING IN" AND CROPPING TO FILL THE CIRCLE --- */
+    object-fit: cover;
 
-    /* This controls WHICH PART of the zoomed-in image is visible */
+    /* --- This controls WHICH PART of the zoomed-in image is visible --- */
     /* Adjust these values to focus on the desired area (e.g., your face) */
-    /* object-position: center 30%;  */
-    object-position: 90% 20%; 
+    object-position: 50% 52%; /* Example: Centers horizontally, aligns to top vertically */
+    /* Experiment with:
+       object-position: center center;  (for the exact middle of the original image)
+       object-position: 50% 30%;      (50% from left, 30% from top of the original image)
+    */
 
-    /* Ensure no conflicting styles like max-width: 100% or height: auto here */
-    max-width: none; /* Remove any potential max-width limits */
-    max-height: none; /* Remove any potential max-height limits */
-    padding: 0; /* No padding on the image itself */
-    margin: 0;  /* No margin on the image itself */
+    /* --- Ensure no conflicting styles on the image itself --- */
+    max-width: none;  /* Prevents image from being limited by a max-width: 100% */
+    max-height: none; /* Prevents image from being limited by a max-height: 100% */
+    padding: 0;       /* No padding on the image itself */
+    margin: 0;        /* No margin on the image itself */
 }
 
-/* Ensure the first paragraph of text is also aligned to the top */
+/* --- Optional: Adjust text alignment to align with the image top if needed --- */
+/* (This applies to the first paragraph in the text column) */
 .col-6 p:first-child {
     margin-top: 0;
 }
