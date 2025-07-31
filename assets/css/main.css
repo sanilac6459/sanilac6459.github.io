@@ -2045,7 +2045,6 @@ input, select, textarea {
 			height: 1px;
 			margin-top: 1.5em;
 			width: 6em;
-			text-align: left;
 		}
 
 		header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
@@ -2823,11 +2822,13 @@ input, select, textarea {
 
 
 .content-box{
+	max-width: 100%;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
 	padding: 2rem;
+	/* padding-bottom: 0; */
 
 	margin: 0 10px 20px 20px;
 	/* background-color: #D0C1BF; */
