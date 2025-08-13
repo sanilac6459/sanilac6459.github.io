@@ -18,17 +18,11 @@
 	
 		
 		<style>
-			/* Navigation Bar Styles */
 			.navbar {
+				background: #D8C5C0;
 				position: fixed;
 				top: 0;
 				width: 100%;
-				/* background-color: #D3B8B4; */
-				/* background-color: #D8C3C0; */
-				/* background-color: #BFA09C; */
-				/* background-color: #D8C3C0; */
-				/* background-color: #D4BDBA; */
-				background: #D8C5C0;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
@@ -70,16 +64,14 @@
 				
 			}
 
-			/* --- NEW CSS FOR ACTIVE NAV LINK --- */
 			.navbar ul li a.active-nav {
-				color: #22223B; /* Darker color for active state */
-				font-weight: bold; /* Make it bold when active */
-				text-decoration: none; /* Remove any default underline */
-				border-bottom: 2px solid #22223B; /* Solid underline for active state */
-				text-underline-offset: 10px; /* Adjust offset for active state */
+				color: #22223B;
+				font-weight: bold;
+				text-decoration: none;
+				border-bottom: 2px solid #22223B;
+				text-underline-offset: 10px;
 			}
 	
-			/* Responsive Menu */
 			@media (max-width: 768px) {
 				.navbar ul {
 					flex-direction: column;
@@ -134,8 +126,6 @@
 	
 	</head>
 	<body class="is-preload">
-		<!-- Header -->
-			<!-- Navigation Bar -->
 			<nav class="navbar">
 				<a href="#header" class="logo" style = "border-bottom: none;">Sanila Chowdhury</a>
 				<ul>
@@ -150,49 +140,32 @@
 			<script>
 
 			document.addEventListener('DOMContentLoaded', function() {
-			const sections = document.querySelectorAll('section'); // Selects all <section> tags
-			const navLinks = document.querySelectorAll('.navbar ul li a'); // Selects all links in your navbar
+			const sections = document.querySelectorAll('section');
+			const navLinks = document.querySelectorAll('.navbar ul li a');
 
 			function highlightNavLink() {
 				let currentSectionId = '';
-				const offset = 100; // Height of your fixed navbar + a little buffer. Adjust if your navbar is taller.
-
-				// Iterate through sections from the LAST to the FIRST
-				// This is crucial for correctly identifying the active section, especially the last one
+				const offset = 100;
 				for (let i = sections.length - 1; i >= 0; i--) {
 					const section = sections[i];
 					const sectionTop = section.offsetTop;
-
-					// Check if the current scroll position is within this section
-					// or if we are at the very bottom of the page and this is the last section
 					if (pageYOffset >= sectionTop - offset || (i === sections.length - 1 && (window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 5)) {
 						currentSectionId = section.getAttribute('id');
-						break; // Found the active section, no need to check further
+						break;
 					}
 				}
 
-
-				// Apply/Remove 'active-nav' class
 				navLinks.forEach(link => {
-					link.classList.remove('active-nav'); // Remove from all first
-					// Check if the link's href matches the current section's ID
+					link.classList.remove('active-nav');
 					if (link.href.endsWith('#' + currentSectionId)) {
-						link.classList.add('active-nav'); // Add to the matching link
+						link.classList.add('active-nav');
 					}
 				});
 			}
 
-				// Run on page load (in case user loads page directly to a section ID)
 				highlightNavLink();
-
-				// Run on scroll
 				window.addEventListener('scroll', highlightNavLink);
 
-				// --- Your toggleMenu function for responsive menu (if you have one) ---
-				// function toggleMenu() {
-				//     const navbarUl = document.querySelector('.navbar ul');
-				//     navbarUl.classList.toggle('active');
-				// }
 			});
 				
 			function toggleMenu() {
@@ -200,26 +173,21 @@
 				menu.classList.toggle('active');
 			}
 
-				// Close the dropdown menu after clicking a link
 			document.querySelectorAll('.navbar ul li a').forEach(link => {
 				link.addEventListener('click', () => {
 					var menu = document.querySelector('.navbar ul');
 					menu.classList.remove('active');
 				});
-		});
-
-				
+		    });
 			</script>
 
 			
-		
-		
-		
+		<!-- header -->
 		<section id="header">	
 				<div class="inner">
 					 <img class = "responsive-logo" src = "images/logo.png"> 
 				
-					<!-- Typing animation -->
+					<!-- typing animation -->
 					 <div class = "container-special">
 						<h1>Hi, I'm <strong>Sanila!</strong>🌷</h1>
 						
@@ -240,13 +208,11 @@
 					<ul class="actions special">
 						<li><a href="#aboutme" class="button wide">Learn more about me and my work</a></li>
 					</ul>
-
-					
 				</div>
 			</section>
 
-		<!-- One -->
 
+		<!-- about me section -->
 			<section id="aboutme" class="main style1 special">
 				<div class="container">
 					<header class="major">
@@ -254,13 +220,13 @@
 						<div class="header-line"></div> 
 					</header>
 						<div class="row gtr-150">
-							<p style="color: #44475F; text-align: left;">I’m a dedicated Computer Science student at CUNY Hunter College and part of the CS Daedalus Honors Scholar Program. My journey began in high school, where I took a <strong>four-year software engineering course</strong>. While solving algorithms and developing personal projects, I found my passion for programming and technology. I envisioned myself working in the tech industry, turning my imagination into innovations that shape the future. Finding something I love doing has driven me to pursue a career in <strong>software engineering</strong>. Since then, I’ve worked on many personal projects, developed expertise in various programming languages, tools, and frameworks, and gained insights into the industry through events, workshops, and internships.</p>
+							<p style="color: #44475F; text-align: left;">I’m a dedicated Computer Science student at CUNY Hunter College and part of the CS Daedalus Honors Scholar Program. My journey began in high school, where I took a <strong>four-year software engineering course</strong>. While solving algorithms and developing personal projects, I found my passion for programming and technology. I envisioned myself working in the tech industry, turning my ideas into innovations that shape the future. Finding something I love doing has driven me to pursue a career in <strong>software engineering</strong>. Since then, I’ve worked on many personal projects, developed expertise in various programming languages, tools, and frameworks, and gained insights into the industry through events, workshops, and internships.</p>
 							<p style="color: #44475F; text-align: left;">As a woman in tech, I want to pursue a career where I can make an <strong>impact</strong>. Technology is an ever-growing field, with new ideas and innovations serving as stepping stones to endless possibilities. Seeing how people dedicate their passion and hard work to their ideas has motivated me to push my limits and build the confidence to contribute to future tech milestones.</p>
 					</div>
 				</div>
 			</section>
 
-
+			<!-- experience section -->
 			<section id="experience" class="main style4 special">
 				<div class="container">
 				  <header class="major">
@@ -269,26 +235,28 @@
 				 <div class="row gtr-150">
 					<div class = "col-6 col-12-medium">
 						<div class="content-box" style="background-color: #D8C5C0; box-shadow: 5px 4px 6px rgba(68, 71, 95, 0.2); padding-top: 0 !important; padding-bottom: 0 !important; margin-top: 0;">
-							<img src="images/google.jpeg" alt="Software Engineer Icon" class="experience-icon" style="width: 10%; padding-top: 55px;"> <h4 style="color: #44475F; text-align: left; margin-left: 75px; position: relative; bottom: 55px;">B-SWEP (Basta SWEP Google Software Engineering Program) Mentee</h4>
-							<h6 style="color: #44475F; text-align: left; font-size: 18px; font-weight: 500; position: relative; top: -75px; margin-left: 75px; position: relative; bottom: 35px;">Google</h6>
-							<h6 style="color: #44475F; text-align: left; font-size: 16px; font-weight: 500; position: relative; top: -90px; margin-left: 75px; position: relative; bottom: 25px;">July 2025</h6>
-							<p style="color: #44475F; line-height: 1.5; position: relative; top: -80px; margin-left: 5px; position: relative; bottom: 25px;">• N/A</p>
+							<img src="images/ctp.jpeg" alt="Software Engineer Icon" class="experience-icon" style="width: 10%; padding-top: 55px;"> <h4 style="color: #44475F; text-align: left; margin-left: 75px; position: relative; bottom: 55px;">Software Engineer Fellow</h4>
+							<h6 style="color: #44475F; text-align: left; font-size: 18px; font-weight: 500; position: relative; top: -75px; margin-left: 75px; position: relative; bottom: 35px;">CUNY Tech Prep</h6>
+							<h6 style="color: #44475F; text-align: left; font-size: 16px; font-weight: 500; position: relative; top: -90px; margin-left: 75px; position: relative; bottom: 25px;">July 2025 - Present</h6>
+							<p style="color: #44475F; line-height: 1.5; position: relative; top: -80px; margin-left: 5px; position: relative; bottom: 25px;">• Selected for a highly competitive full-stack fellowship across 11 CUNY senior colleges; focused on technical skill-building and career readiness through weekly workshops and mentorship</p>
+							<p style="color: #44475F; line-height: 1.5; position: relative; top: -80px; margin-left: 5px; position: relative; bottom: 25px;">• Developed scalable web applications with React and TypeScript, boosting maintainability, optimizing performance, and enhancing user experience in collaborative, agile team projects</p>
 						</div>
 				 	</div>
 					<div class = "col-6 col-12-medium">
 						<div class="content-box" style="background-color: #D8C5C0; box-shadow: 5px 4px 6px rgba(68, 71, 95, 0.2); padding-top: 0 !important; padding-bottom: 0 !important; margin-top: 0;">
-							<img src="images/ctp.jpeg" alt="Software Engineer Icon" class="experience-icon" style="width: 10%; padding-top: 55px;"> <h4 style="color: #44475F; text-align: left; margin-left: 75px; position: relative; bottom: 55px;">Software Engineer Fellow</h4>
-							<h6 style="color: #44475F; text-align: left; font-size: 18px; font-weight: 500; position: relative; top: -75px; margin-left: 75px; position: relative; bottom: 35px;">CUNY Tech Prep</h6>
-							<h6 style="color: #44475F; text-align: left; font-size: 16px; font-weight: 500; position: relative; top: -90px; margin-left: 75px; position: relative; bottom: 25px;">July 2025</h6>
-							<p style="color: #44475F; line-height: 1.5; position: relative; top: -80px; margin-left: 5px; position: relative; bottom: 25px;">• N/A</p>
+							<img src="images/google.jpeg" alt="Software Engineer Icon" class="experience-icon" style="width: 10%; padding-top: 55px;"> <h4 style="color: #44475F; text-align: left; margin-left: 75px; position: relative; bottom: 55px;">B-SWEP Mentee (Basta SWEP Google Software Engineering Program)</h4>
+							<h6 style="color: #44475F; text-align: left; font-size: 18px; font-weight: 500; position: relative; top: -75px; margin-left: 75px; position: relative; bottom: 35px;">Google</h6>
+							<h6 style="color: #44475F; text-align: left; font-size: 16px; font-weight: 500; position: relative; top: -90px; margin-left: 75px; position: relative; bottom: 25px;">July 2025 - Present</h6>
+							<p style="color: #44475F; line-height: 1.5; position: relative; top: -80px; margin-left: 5px; position: relative; bottom: 25px;">• Selected from 600+ applicants for a competitive Google-sponsored mentorship program focused on software engineering fundamentals and career development</p>
+							<p style="color: #44475F; line-height: 1.5; position: relative; top: -80px; margin-left: 5px; position: relative; bottom: 25px;">• Strengthened problem-solving and technical communication skills by completing coding challenges, mock interviews, and real-world engineering discussions with a Google Software Engineer</p>
 						</div>
 				 	</div>
 					<div class = "col-6 col-12-medium">
 						<div class="content-box" style="background-color: #D8C5C0; box-shadow: 5px 4px 6px rgba(68, 71, 95, 0.2); padding-top: 0 !important; padding-bottom: 0 !important; margin-top: 0;">
 							<img src="images/codepath.jpeg" alt="Software Engineer Icon" class="experience-icon" style="width: 10%; padding-top: 55px;"> <h4 style="color: #44475F; text-align: left; margin-left: 75px; position: relative; bottom: 55px;">Technical Interview Prep Fellow</h4>
 							<h6 style="color: #44475F; text-align: left; font-size: 18px; font-weight: 500; position: relative; top: -75px; margin-left: 75px; position: relative; bottom: 35px;">CodePath</h6>
-							<h6 style="color: #44475F; text-align: left; font-size: 16px; font-weight: 500; position: relative; top: -90px; margin-left: 75px; position: relative; bottom: 25px;">May 2025</h6>
-							<p style="color: #44475F; line-height: 1.5; position: relative; top: -80px; margin-left: 5px; position: relative; bottom: 25px;">• N/A</p>
+							<h6 style="color: #44475F; text-align: left; font-size: 16px; font-weight: 500; position: relative; top: -90px; margin-left: 75px; position: relative; bottom: 25px;">June 2025 - August 2025</h6>
+							<p style="color: #44475F; line-height: 1.5; position: relative; top: -80px; margin-left: 5px; position: relative; bottom: 25px;">• Mentored over 300 students in foundational Python concepts, data structures, and algorithms, empowering them to strengthen their problem-solving abilities and improve their technical interview readiness</p>
 						</div>
 				 	</div>
 					<div class = "col-6 col-12-medium">
@@ -336,7 +304,7 @@
 			  </section>
 			
 
-		<!-- Two -->
+		<!-- skills section -->
 			<section id="skills" class="main style3 special">
 				<div class="container">
 					<header class="major">
@@ -386,7 +354,8 @@
 				</div>
 			</section>
 
-		<!-- Three -->
+
+		<!-- projects section -->
 			<section id="projects" class="main style2 special">
 				<div class="container">
 					<header class="major">
@@ -515,7 +484,7 @@
 				</div>
 			</section>
 
-		<!-- Footer -->
+		<!-- footer section -->
 			<section id="footer">
 				<h2>Contact</h2>
 				<ul class="icons">
@@ -528,7 +497,7 @@
 				<p>© Copyright 2024 Sanila Chowdhury</p>
 			</section>
 
-		<!-- Scripts -->
+		<!-- scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
