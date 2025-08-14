@@ -3788,3 +3788,91 @@ img {
 .col-6 p:first-child {
     margin-top: 0;
 }
+
+/* Section container */
+.skills-section {
+  background-color: #D8C5C0; /* Full black background */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Main title */
+.skills-title {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* Each skill category card */
+.skills-category {
+  background-color: #D8C5C0; /* Dark gray card background */
+ box-shadow: 5px 4px 6px rgba(68, 71, 95, 0.2);
+  border-radius: 15px;
+  padding: 25px 20px;
+  margin-bottom: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills-category:hover {
+transform: translateY(-5px);
+  box-shadow: 5px 4px 6px rgba(68, 71, 95, 0.2);
+}
+
+/* Category titles (Frontend, Backend, Development Tools) */
+.category-title {
+  color: #44475F; /* Blue like in screenshot */
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  top: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Grid for skills */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+/* Each skill block */
+.skill-item {
+  width: 80px;
+  text-align: center;
+  
+}
+
+/* Skill icon images */
+.skill-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  background-color: #B29DA0;
+  padding: 10px;
+  border-radius: 12px;
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.4); */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  top: 10px;
+}
+
+/* Skill name text */
+.skill-item p {
+  color: #44475F;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skills-grid {
+    justify-content: center;
+  }
+}
