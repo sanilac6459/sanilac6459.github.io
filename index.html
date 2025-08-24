@@ -19,7 +19,7 @@
 		
 		<style>
 			.navbar {
-				background: #D8C5C0;
+				background: transparent;
 				position: fixed;
 				top: 0;
 				width: 100%;
@@ -28,11 +28,16 @@
 				align-items: center;
 				padding: 25px 20px;
 				z-index: 1000;
-				box-shadow: 0 3px 5px rgba(68, 71, 95, 0.2);
+				box-shadow: none;
+			}
+
+			.navbar.scrolled {
+				background: #D8C5C0; 
+				box-shadow: 0 3px 5px rgba(68, 71, 95, 0.2); 
 			}
 			
 			.navbar .logo {
-				color: #4A4E69;
+				color: white;
 				font-size: 20px;
 				font-weight: bold;
 				text-decoration: none;
@@ -45,32 +50,57 @@
 				padding: 0;
 				
 			}
-	
+
 			.navbar ul li {
 				padding: 0 15px;
 				
 			}
-	
+
 			.navbar ul li a {
-				color: #4A4E69;
+				color: white; 
 				text-decoration: none;
 				font-size: 18px;
-				border-bottom: none; 
-			}
-	
-			.navbar ul li a:hover {
-				color: #22223B;
-				text-underline-offset: 10px;
-				
+				border-bottom: none;
+				transition: color 0.3s ease;
 			}
 
-			.navbar ul li a.active-nav {
+			.navbar ul li a:hover {
+				color: #f1d4d4; 
+				text-underline-offset: 10px;
+			}
+
+			.navbar.scrolled .logo {
+				color: #4A4E69; 
+			}
+
+
+			.navbar.scrolled ul li a {
+				color: #4A4E69; 
+			}
+
+
+			.navbar.scrolled ul li a:hover {
+				color: #22223B; 
+			}
+
+
+			.navbar.scrolled ul li a.active-nav {
 				color: #22223B;
 				font-weight: bold;
 				text-decoration: none;
 				border-bottom: 2px solid #22223B;
 				text-underline-offset: 10px;
 			}
+
+
+			.navbar ul li a.active-nav {
+				color: white; 
+				font-weight: bold;
+				text-decoration: none;
+				border-bottom: 2px solid white; 
+				text-underline-offset: 10px;
+			}
+
 	
 			@media (max-width: 768px) {
 				.navbar ul {
@@ -179,6 +209,16 @@
 					menu.classList.remove('active');
 				});
 		    });
+
+			window.addEventListener("scroll", function() {
+				const navbar = document.querySelector(".navbar");
+				if (window.scrollY > 700) {
+					navbar.classList.add("scrolled");
+				} 
+				else {
+					navbar.classList.remove("scrolled");
+				}
+			});
 			</script>
 
 			
