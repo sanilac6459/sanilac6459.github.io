@@ -137,6 +137,13 @@
 	
 				.navbar .menu-toggle {
 					display: block;
+					color: white;
+					cursor: pointer;
+					font-size: 24px;
+            	}
+
+				.navbar.scrolled .menu-toggle {
+					display: block;
 					color: #44475F;
 					cursor: pointer;
 					font-size: 24px;
@@ -212,7 +219,7 @@
 
 			window.addEventListener("scroll", function() {
 				const navbar = document.querySelector(".navbar");
-				if (window.scrollY > 700) {
+				if (window.scrollY > 200) {
 					navbar.classList.add("scrolled");
 				} 
 				else {
