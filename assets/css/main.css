@@ -3699,6 +3699,7 @@ img {
 .content-box {
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
+  
 }
 
 .content-box:hover {
